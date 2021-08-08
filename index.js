@@ -1,7 +1,9 @@
 const inquirer = require("inquirer");
 const fs = require('fs');
-const axios = require("axios");
 const generate = require('./utils/generateMarkdown');
+const { error } = require('console');
+
+console.log('hello classmate, time to creat a README.md file for your project!');
 
 const questions = [
     {
@@ -10,9 +12,10 @@ const questions = [
         message: "What is your project title?"
     },
     {
-        type: "input",
-        name: "badge",
-        message: "Please provide the badges links that you want"
+        type: "checkbox",
+        name: 'license',
+        choices: ['Apache License 2.0', 'GNU Public License v3.0', 'Open Software License 3.0', 'MIT', 'Mozilla Public License 2.0'],
+        message:'Please enter the license you wish to use.',
     },
     {
         type: "input",
