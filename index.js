@@ -1,91 +1,63 @@
 const inquirer = require("inquirer");
-const fs = require('fs');
-const generate = require('./utils/generateMarkdown');
-const { error } = require('console');
-
-console.log('hello classmate, time to creat a README.md file for your project!');
-
-const questions = [
-    {
-        type: "input",
-        name: "title",
-        message: "What is your project title?"
-    },
-    {
-        type: "checkbox",
-        name: 'license',
-        choices: ['Apache License 2.0', 'GNU Public License v3.0', 'Open Software License 3.0', 'MIT', 'Mozilla Public License 2.0'],
-        message:'Please enter the license you wish to use.',
-    },
-    {
-        type: "input",
-        name: "description",
-        message: "Please provide your project's description"
-    },
-    {
-        type: "input",
-        name: "installation",
-        message: "Please provide the installation instructions"
-    },
-    {
-        type: "input",
-        name: "usage",
-        message: "Please provide the project usage"
-    },
-    {
-        type: "input",
-        name: "licence",
-        message: "Please provide the project licence or your badge link"
-    },
-    {
-        type: "input",
-        name: "contributing",
-        message: "Please provide the contributing parties"
-    },
-    {
-        type: "input",
-        name: "test",
-        message: "Please provide the project tests"
-    },
-    {
-        type: "input",
-        name: "username",
-        message: "What is your github user name?"
-    },
-    {
-        type: "input",
-        name: "repo",
-        message: "What is your repo link?"
-    },
-];
+const fs = require("fs");
+const generateMarkdown = require("./generateMarkdown");
 
 inquirer
-    .prompt(questions)
-    .then(function(data){
-        const queryUrl = `https://api.github.com/users/${data.username}`;
-
-        axios.get(queryUrl).then(function(res) {
-            
-            const githubInfo = {
-                githubImage: res.data.avatar_url,
-                email: res.data.email,
-                profile: res.data.html_url,
-                name: res.data.name
-            };
-            
-          fs.writeFile("README.md", generate(data, githubInfo), function(err) {
-            if (err) {
-              throw err;
-            };
+    .prompt([
+        {
+            type: "input",
+            message: "What is the project title?",
+            name: "name"
+        },
+        {
+            type: "input",
+            message: "Description of the project.",
+            name: "description"
+        },
+        {
+            type: "input",
+            message: "Installation instructions",
+            name: "installation"  
+        },
+        {
+            type: "input",
+            message: "Provide instructions and examples for use.",
+            name: "usage"
+        },      
+        {
+            type: "input",
+            message: "Write guidlines for contributing.",
+            name: "contributing"
+        },
+        {
+            type: "tests",
+            message: "Provide how to run tests for your application.",
+            name: "tests"
+        },
+        {
+            type: "list",
+            message: "Under which license is this application covered?",
+            name: "license",
+            choices: [
+             "MIT",
+             "Boost",
+             "Mozilla"
+                ]
+        },
+        {
+            type: "input",
+            message: "What is your email address?",
+            name: "email",
+        },
+        {
+            type: "input",
+            message: "What is your Github username?",
+            name: "github"  
+        }   
+    ])
     
-            console.log("New README file created with success!");
-          });
-        });
-
-});
-
-function init() {
-
-}
-
-init();
+    .then((input) => {
+        fs.writeFile('README.md', generateMarkdown(input), (err) =>
+        err ? console.error(err) : console.log('README created!'))
+    
+    })
