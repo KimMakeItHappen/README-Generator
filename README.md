@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 # job seeker
 
 
@@ -46,4 +51,8 @@ npm test
 ## Questions
 
 If you have any questions about the repo, open an issue or contact me directly at kperez22692@gmail.com. You can find more of my work at [kimmakeithappen](https://github.com/kimmakeithappen/).
+<<<<<<< HEAD
+=======
+>>>>>>> 451573b (update)
+>>>>>>> origin/main
 
