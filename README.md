@@ -1,61 +1,49 @@
-<<<<<<< HEAD
-![Untitled_ Aug 15, 2021 7_14 PM](https://user-images.githubusercontent.com/80864786/129495705-ed854a65-64a9-4cc9-993b-085359c6af69.gif)
-![Untitled_ Aug 15, 2021 7_14 PM (1)](https://user-images.githubusercontent.com/80864786/129495727-dce44b17-d29a-4789-9a18-8ca9a602554a.gif)
-# test 
-=======
-# testing  
->>>>>>> 34de757 (updated)
- 
-[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0) 
- 
+# job seeker
 
-## Description 
 
-testing  
- 
+## Description
+
+people able to look for work
 
 ## Table of Contents 
 
-- [Installation](#install) 
+* [Installation](#installation)
 
-- [Usage](#useinfo) 
+* [Usage](#usage)
 
-- [Contribution](#contribute) 
+* [Contributing](#contributing)
 
-- [Testing](#test) 
+* [Tests](#tests)
 
-- [License](#license) 
+* [Questions](#questions)
 
-- [Questions](#questions) 
- 
+## Installation
 
-## Installation 
+To install necessary dependencies, run the following command:
 
-undefined 
- 
+```
+npm i
+```
 
-## Usage 
+## Usage
 
-undefined 
- 
+seeking jobs
 
-## Contribution 
 
-undefined 
- 
+  
+## Contributing
 
-## Testing 
+there is community 
 
-undefined 
- 
+## Tests
 
-## License 
+To run tests, run the following command:
 
-This application is covered under the Mozilla license. 
- 
+```
+npm test
+```
 
-## Questions 
+## Questions
 
-Contact Me Here: kperez22692@gmail.com 
+If you have any questions about the repo, open an issue or contact me directly at kperez22692@gmail.com. You can find more of my work at [kimmakeithappen](https://github.com/kimmakeithappen/).
 
-Github: https://github.com/kimMakeItHappen 
