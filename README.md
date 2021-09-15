@@ -1,20 +1,17 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-# job seeker
-
+# testing 
+![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Description
 
-people able to look for work
+this is a test
 
 ## Table of Contents 
 
 * [Installation](#installation)
 
 * [Usage](#usage)
+
+* [License](#license)
 
 * [Contributing](#contributing)
 
@@ -26,33 +23,27 @@ people able to look for work
 
 To install necessary dependencies, run the following command:
 
-```
 npm i
-```
 
 ## Usage
 
-seeking jobs
+this is a test
 
+## License
 
+This project is licensed under the MIT license.
   
 ## Contributing
 
-there is community 
+this is a test
 
 ## Tests
 
 To run tests, run the following command:
 
-```
 npm test
-```
 
 ## Questions
 
-If you have any questions about the repo, open an issue or contact me directly at kperez22692@gmail.com. You can find more of my work at [kimmakeithappen](https://github.com/kimmakeithappen/).
-<<<<<<< HEAD
-=======
->>>>>>> 451573b (update)
->>>>>>> origin/main
+If you have any questions contact me directly at testing@gmail.com. You can find more of my work at [testing](https://github.com/testing/).
 
